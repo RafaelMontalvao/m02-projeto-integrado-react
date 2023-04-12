@@ -11,10 +11,7 @@ import { useState } from 'react';
 function App() {
 
   const [globalState, setGlobalState] = useState({
-    user: {
-    name: "Rafael",
-    isAdmin: true,
-  },
+   
 });
   return (
     
