@@ -4,6 +4,7 @@ import PageWrapper from './components/PageWrapper';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import CourseDetailsPage from './pages/CourseDetailsPage/CourseDetailsPage';
+import LoginPage from './pages/LoginPage';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -25,6 +26,7 @@ function App() {
               <Routes>
                 <Route path="/" element ={<HomePage />}/>
                 <Route path="/course/:id" element ={<CourseDetailsPage/>}/>
+                <Route path="/login" element ={<LoginPage/>}/>
                 <Route path="*" element ={<div>Pagina nao encotrada</div>}/>
               </Routes>
             
