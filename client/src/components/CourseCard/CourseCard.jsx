@@ -2,9 +2,17 @@ import PropTypes from 'prop-types';
 
 import clockImg from '../../assets/clock.png';
 import Button, { BUTTON_VARIANT } from '../Button';
+import { useNavigate } from 'react-router-dom';
 
 import './CourseCard.css';
-function CourseCard({ imageUrl, name, category, description, duration }) {
+function CourseCard({ id, imageUrl, name, category, description, duration }) {
+  const navigate = useNavigate();
+
+  const handleNavigatedetails = () => {
+    navigate(`/course/${id}`);
+
+  }
+  
   return (
     <div className='courseCardContainer'>
       <div className='courseCardHeader'>
@@ -17,7 +25,7 @@ function CourseCard({ imageUrl, name, category, description, duration }) {
         <p>{duration}h</p>
       </div>
 
-      <Button variant={BUTTON_VARIANT.SECONDARY_OUTLINED} onClick={() => console.log('aa')}>
+      <Button variant={BUTTON_VARIANT.SECONDARY_OUTLINED} onClick={handleNavigatedetails}>
         Ver detalhes
       </Button>
     </div>
