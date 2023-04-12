@@ -1,1 +1,1 @@
-export {GlobalStateProvider} from "./useGlobalState"
+export {useUserInfo, useUserIsAdmin} from "./useUserInfo"

@@ -1,18 +1,13 @@
-import { createContext, useContext, } from "react";
+import { useGlobalState } from "../useGlobalState";
 
-const GlobalState = createContext({});
-
-export const GlobalStateProvider = GlobalState.Provider
-
-export function  useGlobalStateContext(){
-    return useContext(GlobalState);
+export function useUserInfo(){
+    const globalState = useGlobalState();
+    return globalState?.user;  
 }
 
-export function useGlobalState(value){
-    const[globalState] = useGlobalStateContext();
-    return globalState
-}
+export function useUserIsAdmin(){
+     const user = useUserInfo(); 
+     
+    return user?.isAdmin;
 
-export function useSetGlobalState(value){
-    
 }

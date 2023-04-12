@@ -8,12 +8,12 @@ export function  useGlobalStateContext(){
     return useContext(GlobalState);
 }
 
-export function useGlobalState(value){
+export function useGlobalState(){
     const[globalState] = useGlobalStateContext();
     return globalState
 }
 
-export function useSetGlobalState(value){
+export function useSetGlobalState(){
    const [,setGlobalState] = useGlobalStateContext();
     return setGlobalState;
 }

@@ -1,18 +1,23 @@
 import { Spinner } from 'phosphor-react';
 import CourseFilter from '../../components/CourseFilter';
 import CourseList from '../../components/CourseList';
+import Button, {BUTTON_VARIANT} from '../../components/Button';
 import useCourseList from '../../hooks/useCourseList';
-
 import emptyState from '../../assets/empty.svg';
-
 import './HomePage.css';
+import { useUserIsAdmin } from '../../hooks/useUserInfo';
 
 function HomePage() {
   const { courses, error, isLoading, fetchData } = useCourseList();
-
+  const userIsAdin = useUserIsAdmin();
+ 
+ 
   return (
     <div className='homePageContainer'>
-      <CourseFilter onFilter={fetchData} />
+      <div className='listHeader'>
+        <CourseFilter onFilter={fetchData} />
+        {userIsAdin && <Button variant={BUTTON_VARIANT.SECONDARY}>Cadastrar Curso</Button>}
+      </div>
 
       {isLoading && <Spinner width={100} />}
 
