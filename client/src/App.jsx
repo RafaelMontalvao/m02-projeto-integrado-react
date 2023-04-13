@@ -7,6 +7,7 @@ import CourseDetailsPage from './pages/CourseDetailsPage/CourseDetailsPage'
 import LoginPage from './pages/LoginPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 
 function App () {
   const [globalState, setGlobalState] = useState({
@@ -23,7 +24,7 @@ function App () {
                 <Route path="/" element ={<HomePage />}/>
                 <Route path="/course/:id" element ={<CourseDetailsPage/>}/>
                 <Route path="/login" element ={<LoginPage/>}/>
-                <Route path="*" element ={<div>Pagina nao encotrada</div>}/>
+                <Route path="*" element ={<NotFoundPage/>}/>
               </Routes>
 
           </PageWrapper>

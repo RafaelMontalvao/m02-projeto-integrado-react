@@ -8,6 +8,7 @@
         "plugin:react-hooks/recommended",
         "plugin:react/jsx-runtime",
         "plugin:jsx-a11y/recommended",
+        "Prettier",
         "standard"
       ],
     "overrides": [
@@ -17,7 +18,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react", "jsx-a11y"
+        "react", "jsx-a11y", "Prettier"
     ],
     "rules": {},
     
