@@ -8,30 +8,28 @@ import LoginPage from './pages/LoginPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
+import CourseRegisterPage from './pages/CourseRegisterPage'
 
 function App () {
-  const [globalState, setGlobalState] = useState({
-
-  })
+  const [globalState, setGlobalState] = useState({})
   return (
+    <GlobalStateProvider value={[globalState, setGlobalState]}>
+      <BrowserRouter>
+        <Navbar />
 
-      <GlobalStateProvider value={[globalState, setGlobalState]}>
-        <BrowserRouter>
-          <Navbar />
+        <PageWrapper>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/course/:id" element={<CourseDetailsPage />} />
+            <Route path="/course/register" element={<CourseRegisterPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </PageWrapper>
 
-          <PageWrapper>
-              <Routes>
-                <Route path="/" element ={<HomePage />}/>
-                <Route path="/course/:id" element ={<CourseDetailsPage/>}/>
-                <Route path="/login" element ={<LoginPage/>}/>
-                <Route path="*" element ={<NotFoundPage/>}/>
-              </Routes>
-
-          </PageWrapper>
-
-          <Footer />
-        </BrowserRouter>
-      </GlobalStateProvider>
+        <Footer />
+      </BrowserRouter>
+    </GlobalStateProvider>
   )
 }
 

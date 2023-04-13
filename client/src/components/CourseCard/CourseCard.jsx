@@ -13,18 +13,23 @@ function CourseCard ({ id, imageUrl, name, category, description, duration }) {
   }
 
   return (
-    <div className='courseCardContainer'>
-      <div className='courseCardHeader'>
-        {imageUrl && <img width={50} src={imageUrl} alt={`Imagem curso ${name}`} />}
+    <div className="courseCardContainer">
+      <div className="courseCardHeader">
+        {imageUrl && (
+          <img width={50} src={imageUrl} alt={`Imagem curso ${name}`} />
+        )}
         <h3>{name}</h3>
       </div>
 
-      <div className='courseCardDuration'>
-        <img src={clockImg} alt='Ícone de relógio' />
+      <div className="courseCardDuration">
+        <img src={clockImg} alt="Ícone de relógio" />
         <p>{duration}h</p>
       </div>
 
-      <Button variant={BUTTON_VARIANT.SECONDARY_OUTLINED} onClick={handleNavigatedetails}>
+      <Button
+        variant={BUTTON_VARIANT.SECONDARY_OUTLINED}
+        onClick={handleNavigatedetails}
+      >
         Ver detalhes
       </Button>
     </div>

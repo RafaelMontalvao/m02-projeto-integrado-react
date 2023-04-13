@@ -4,11 +4,11 @@ import './CourseList.css'
 
 function CourseList ({ list }) {
   return (
-    <ul className='courseListContainer'>
+    <ul className="courseListContainer">
       {list.map((course) => (
         <li key={course.id}>
           <CourseCard
-            id= {course.id}
+            id={course.id}
             imageUrl={course.imageUrl}
             name={course.name}
             category={course.category}
