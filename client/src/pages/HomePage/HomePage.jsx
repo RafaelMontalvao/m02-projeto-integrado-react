@@ -1,17 +1,16 @@
-import { Spinner } from 'phosphor-react';
-import CourseFilter from '../../components/CourseFilter';
-import CourseList from '../../components/CourseList';
-import Button, {BUTTON_VARIANT} from '../../components/Button';
-import useCourseList from '../../hooks/useCourseList';
-import emptyState from '../../assets/empty.svg';
-import './HomePage.css';
-import { useUserIsAdmin } from '../../hooks/useUserInfo';
+import { Spinner } from 'phosphor-react'
+import CourseFilter from '../../components/CourseFilter'
+import CourseList from '../../components/CourseList'
+import Button, { BUTTON_VARIANT } from '../../components/Button'
+import useCourseList from '../../hooks/useCourseList'
+import emptyState from '../../assets/empty.svg'
+import './HomePage.css'
+import { useUserIsAdmin } from '../../hooks/useUserInfo'
 
-function HomePage() {
-  const { courses, error, isLoading, fetchData } = useCourseList();
-  const userIsAdin = useUserIsAdmin();
- 
- 
+function HomePage () {
+  const { courses, error, isLoading, fetchData } = useCourseList()
+  const userIsAdin = useUserIsAdmin()
+
   return (
     <div className='homePageContainer'>
       <div className='listHeader'>
@@ -29,8 +28,7 @@ function HomePage() {
         <img height={500} src={emptyState} alt='Imagem de nenhum item encontrado' />
       )}
     </div>
-  );
+  )
 }
 
-export default HomePage;
-
+export default HomePage

@@ -1,18 +1,17 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-import clockImg from '../../assets/clock.png';
-import Button, { BUTTON_VARIANT } from '../Button';
-import { useNavigate } from 'react-router-dom';
+import clockImg from '../../assets/clock.png'
+import Button, { BUTTON_VARIANT } from '../Button'
+import { useNavigate } from 'react-router-dom'
 
-import './CourseCard.css';
-function CourseCard({ id, imageUrl, name, category, description, duration }) {
-  const navigate = useNavigate();
+import './CourseCard.css'
+function CourseCard ({ id, imageUrl, name, category, description, duration }) {
+  const navigate = useNavigate()
 
   const handleNavigatedetails = () => {
-    navigate(`/course/${id}`);
-
+    navigate(`/course/${id}`)
   }
-  
+
   return (
     <div className='courseCardContainer'>
       <div className='courseCardHeader'>
@@ -29,15 +28,16 @@ function CourseCard({ id, imageUrl, name, category, description, duration }) {
         Ver detalhes
       </Button>
     </div>
-  );
+  )
 }
 
 CourseCard.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   duration: PropTypes.number.isRequired,
-  imageUrl: PropTypes.string,
-};
+  imageUrl: PropTypes.string
+}
 
-export default CourseCard;
+export default CourseCard
