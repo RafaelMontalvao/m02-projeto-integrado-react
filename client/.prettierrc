@@ -1,6 +1,7 @@
 {
 
     "tabWidith": 2,
+    "singleQuote": true,
     "endOfLine": "auto"
     
     
