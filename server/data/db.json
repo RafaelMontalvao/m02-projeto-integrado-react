@@ -13,6 +13,18 @@
       "email": "romeu@dih.br",
       "password": "321",
       "isAdmin": false
+    },
+    {
+      "name": "teste",
+      "email": "teset@ete",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "rafael",
+      "email": "eaaea@eaea",
+      "password": "123",
+      "id": 4
     }
   ],
   "courses": [

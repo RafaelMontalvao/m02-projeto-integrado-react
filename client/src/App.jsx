@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import CourseDetailsPage from './pages/CourseDetailsPage/CourseDetailsPage'
 import LoginPage from './pages/LoginPage'
+import UserRegisterPage from './pages/UserRegisterPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
@@ -25,6 +26,7 @@ function App () {
             <Route path="/" element={<HomePage />} />
             <Route path="/course/:id" element={<CourseDetailsPage />} />
             <Route path="/course/register" element={<CourseRegisterPage />} />
+            <Route path="/register" element={<UserRegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>

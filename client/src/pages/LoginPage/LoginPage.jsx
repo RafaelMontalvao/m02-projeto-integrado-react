@@ -84,7 +84,7 @@ function LoginPage () {
           {loading ? 'Carregando...' : 'Entrar'}
         </Button>
 
-        <Link to="/signin" className="signinButton">
+        <Link to="/register" className="signinButton">
           Cadastrar
         </Link>
       </div>
