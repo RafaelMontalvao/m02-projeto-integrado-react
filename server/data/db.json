@@ -62,6 +62,15 @@
         }
       ],
       "id": 5
+    },
+    {
+      "targetMarket": "dadada",
+      "duration": 30,
+      "description": "dadad",
+      "category": "dadadad",
+      "imageUrl": "https://devinhouse.tech/wp-content/uploads/sites/2/2022/07/MicrosoftTeams-image-12.png",
+      "name": "weaeaweawe",
+      "id": 6
     }
   ]
 }
