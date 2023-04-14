@@ -9,11 +9,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 import CourseRegisterPage from './pages/CourseRegisterPage'
+import { ThemeProvider } from 'styled-components'
+import { mainTheme } from './styles'
 
 function App () {
   const [globalState, setGlobalState] = useState({})
   return (
     <GlobalStateProvider value={[globalState, setGlobalState]}>
+      <ThemeProvider theme={mainTheme} >
       <BrowserRouter>
         <Navbar />
 
@@ -29,6 +32,7 @@ function App () {
 
         <Footer />
       </BrowserRouter>
+      </ThemeProvider>
     </GlobalStateProvider>
   )
 }
