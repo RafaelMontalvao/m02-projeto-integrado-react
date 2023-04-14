@@ -1,14 +1,14 @@
 import { useParams } from 'react-router-dom'
 import useCourseDetails from '../../hooks/useCourseDetails'
-import './CourseDetailsPage.css'
+import { CourseDetailsPageContainer, CourseDetailsCenterBox } from './styles'
 
-function CourseDetailsPage () {
+function CourseDetailsPage() {
   const { id } = useParams()
   const { course } = useCourseDetails(id)
 
   return (
-    <div className="courseDetailsPageContainer">
-      <div className="courseDetailsCenterBox">
+    <CourseDetailsPageContainer>
+      <CourseDetailsCenterBox>
         <h2>Detalhes do Curso</h2>
         <img src={course?.imageUrl} alt={`Imagem do curso ${course?.name}`} />
         <p>
@@ -23,8 +23,8 @@ function CourseDetailsPage () {
         <p>
           <strong>Duração:</strong> <span>{course?.duration}h</span>
         </p>
-      </div>
-    </div>
+      </CourseDetailsCenterBox>
+    </CourseDetailsPageContainer>
   )
 }
 
